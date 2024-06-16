@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mint demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Apparel+Display:wght@400;700&family=Cerebri+Sans:ital,wght@0,900;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+
+    <link rel="stylesheet" href="btn.css" />
+    <link rel="stylesheet" href="home_page.css" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      .banner {
+        position: relative;
+        background: url("https://images.unsplash.com/photo-1716652894840-ad2be1cefd1e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+          no-repeat center center;
+        background-size: cover;
+        height: 500px;
+        color: #83deb2;
+      }
+      .banner-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .banner h1 {
+        font-family: "Cerebri Sans Heavy", sans-serif;
+        font-size: 5rem;
+        font-weight: 700;
+      }
+
+      .banner p {
+        font-family: "Apparel Display", serif;
+        font-size: 5rem;
+      }
+      @media (max-width: 768px) {
+        .banner h1 {
+          font-family: "Cerebri Sans Heavy", sans-serif;
+          font-size: 5rem;
+          font-weight: 700;
+        }
+        .banner p {
+          font-family: "Apparel Display", serif;
+          font-size: 4rem;
+        }
+      }
+
+      .custom-section {
+        margin: 50px 0;
+        background-color: #f8f9fa;
+      }
+
+      .custom-section h2,
+      .heading-short {
+        font-family: "Apparel Display", serif;
+        font-size: 5rem;
+        font-weight: 700;
+        text-align: left;
+      }
+      .heading-short {
+        font-family: "Apparel Display", serif;
+        font-size: 5rem;
+        font-weight: 700;
+        text-align: center;
+      }
+      .custom-section p {
+        font-family: "Cerebri Sans Heavy", sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+      .custom-section .logo {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body class="">
+    <!-- navbar start -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container d-flex justify-content-between">
+        <a href="http://127.0.0.1:5500/home_page.html"
+          ><img
+            width="200px"
+            src="https://i.postimg.cc/P5hLsFfm/Screenshot-3-removebg-preview.png"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link fw-bold"
+                href="http://127.0.0.1:5500/what-we-do.html"
+                >What We Do</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Our Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Inside Minds</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- navbar end -->
+
+    <!-- Banner start -->
+    <div
+      class="banner position-set d-flex align-items-center justify-content-center"
+    >
+      <div class="banner-content">
+        <h1 class="">Acclaimed marketing talent</h1>
+        <p>backing your business growth</p>
+        <a href="#" class=""
+          ><button class="button-57" role="button">
+            <span class="text">Our work <i class="fas fa-arrow-right"></i
+              > </span><span>Click Me</span>
+          </button></a
+        >
+        <a href="#" class="ml-3"
+          ><button class="button-57" role="button">
+            <span class="text">Contact us <i class="fas fa-arrow-right"></i
+              ></span><span  class="">Click Me</span>
+          </button></a
+        >
+      </div>
+    </div>
+
+    <!-- Banner end -->
+
+    <!-- heading and logo section start -->
+    <section class="custom-section">
+      <div class="container">
+        <div class="row Expect-more align-items-center">
+          <div
+            class="col-md-6 order-md-2 flex-md-row-reverse text-center mb-4 mb-md-0"
+          >
+            <img
+              width="350px"
+              src="download.png"
+              alt="Company Logo"
+              class="logo"
+            />
+          </div>
+          <div class="col-md-6 order-md-1">
+            <h2 class="">Expect more from your marketer</h2>
+            <p class="">
+              We drive marketing results that are meaningful to you, whether
+              it’s increasing revenue, training your team, building brand trust,
+              driving website traffic, or knocking a competitor off the top of
+              the podium.
+            </p>
+            <div class="d-grid mr-3 d-md-flex justify-content-start">
+              <a href="#" class=""
+                ><button class="button-57" role="button">
+                  <span class="text">See our work <i class="fas fa-arrow-right"></i
+                    ></span><span  class="">Click Me</span>
+                </button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- heading and logo section end -->
+
+    <!-- rounded-section background section start -->
+    <section class="rounded-section">
+      <div class="container">
+        <h1 class="text-center w-100 heading-short">
+          In a world of marketing <br />
+          complexity, we offer simplicity <br />
+          through consistent, world-class <br />
+          service.
+        </h1>
+        <div class="row justify-content-center">
+          <!-- First Item -->
+          <div class="col-md-4 item">
+            <img
+              width="100px"
+              src="worldwide.png"
+              alt="Image"
+              class="rounded-circle"
+            />
+            <h3>Ranked top 4% globally</h3>
+            <p>for our customer experience</p>
+          </div>
+          <!-- Second Item -->
+          <div class="col-md-4 item">
+            <img
+              width="100px"
+              src="trophy.png"
+              alt="Image"
+              class="rounded-circle"
+            />
+            <h3>13 awards and accolades</h3>
+            <p>locally and globally</p>
+          </div>
+          <!-- Third Item -->
+          <div class="col-md-4 item">
+            <img
+              width="100px"
+              src="icons8-clock-100.png"
+              alt="Image"
+              class="rounded-circle"
+            />
+            <h3>Deloitte Fast 500</h3>
+            <p>listed 4 years</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <h1 class="text-center heading-short m-5">
+          We work with clients big and small, local and global.
+        </h1>
+        <div class="center-slider">
+          <div>
+            <img
+              src="https://i.postimg.cc/qB3x7hqp/Case-studie-OVS-Scale-Max-Width-Wz-Yw-MF0.jpg"
+              alt="Slide 1"
+            />
+            <h2>Case-studie</h2>
+          </div>
+          <div>
+            <img
+              src="https://i.postimg.cc/zGJCpxjf/Case-studies-City-Mission-v2-Scale-Max-Width-Wz-Yw-MF0.jpg"
+              alt="Slide 2"
+            />
+            <h2>This is heading</h2>
+          </div>
+          <div>
+            <img
+              src="https://i.postimg.cc/y8vFG0Qy/Case-studies-Mitre10-Mega-v2-Scale-Max-Width-Wz-Yw-MF0.jpg"
+              alt="Slide 3"
+            />
+            <h2>This is heading</h2>
+          </div>
+          <div>
+            <img
+              src="https://i.postimg.cc/fbPYzDh3/Case-studies-Ryman-Scale-Max-Width-Wz-Yw-MF0.jpg"
+              alt="Slide 4"
+            />
+            <h2>This is heading</h2>
+          </div>
+          <div>
+            <img
+              src="https://i.postimg.cc/J0VJXx0M/Case-studies-Shine-On-copy-v2-Scale-Max-Width-Wz-Yw-MF0.jpg"
+              alt="Slide 5"
+            />
+            <h2>This is heading</h2>
+          </div>
+          <div>
+            <img
+              src="https://i.postimg.cc/8cRvmvfW/Case-studies-Shine-On-v3-Scale-Max-Width-Wz-Yw-MF0.jpg"
+              alt="Slide 6"
+            />
+            <h2>This is heading</h2>
+          </div>
+        </div>
+        <div class="d-grid mr-3 mt-5 d-md-flex justify-content-center">
+          <a href="#" class=""
+            ><button class="button-57" role="button">
+              <span class="text">See All Our Work <i class="fas fa-arrow-right"></i
+                ></span><span  class="">Click Me</span>
+            </button></a>
+        </div>
+      </div>
+
+      <div class="container text-center mb-4">
+        <h1 class="heading-short text-heading">
+          Partnering with you for sustainable, scalable business growth.
+        </h1>
+        <p class="lead f-heading fs-4">
+          We work best with ambitious Kiwi businesses who are in it for the long
+          game, and who have capacity and hunger for growth. You’ll love us if
+          you have big expectations and you are ready to invest in our
+          expertise.
+        </p>
+      </div>
+      <div class="container">
+        <section class="logos-slider slider">
+          <div width="160px" class="slide">
+            <img
+              src="https://i.postimg.cc/ZYw4CRMD/Accor-Fit-Max-Wz-Qw-MCwz-Nj-Bd.png"
+            />
+          </div>
+          <div class="slide">
+            <img
+              width="160px"
+              src="https://i.postimg.cc/c4jWBzZR/Anytime-Fitness-Fit-Max-Wz-Qw-MCwz-Nj-Bd.png"
+            />
+          </div>
+
+          <div class="slide">
+            <img
+              width="160px"
+              src="https://i.postimg.cc/c4Vqn8MT/Coffee-Culture-Fit-Max-Wz-Qw-MCwz-Nj-Bd.png"
+            />
+          </div>
+          <div class="slide">
+            <img
+              width="160px"
+              src="https://i.postimg.cc/dVdbmt5F/Jennian-Homes-Fit-Max-Wz-Qw-MCwz-Nj-Bd.png"
+            />
+          </div>
+          <div class="slide">
+            <img
+              width="160px"
+              src="https://i.postimg.cc/VNW2pZyH/Milestone-Homes-Fit-Max-Wz-Qw-MCwz-Nj-Bd.png"
+            />
+          </div>
+          <div class="slide">
+            <img
+              width="160px"
+              src="https://i.postimg.cc/G2MVhBmF/Mitre10-Fit-Max-Wz-Qw-MCwz-Nj-Bd.png"
+            />
+          </div>
+          <div class="slide">
+            <img
+              width="160px"
+              src="https://i.postimg.cc/sxv8BVMt/Online-Vet-Store-Fit-Max-Wz-Qw-MCwz-Nj-Bd.png"
+            />
+          </div>
+          <div class="slide">
+            <img
+              width="160px"
+              src="https://i.postimg.cc/Jhd6XfjJ/Ryman-Fit-Max-Wz-Qw-MCwz-Nj-Bd.png"
+            />
+          </div>
+
+          <div class="slide">
+            <img
+              width="160px"
+              src="https://i.postimg.cc/FKNBybfb/TOP-10-Fit-Max-Wz-Qw-MCwz-Nj-Bd.png"
+            />
+          </div>
+        </section>
+      </div>
+      <div class="container text-center mt-5 pt-5">
+        <h1 class="res-heading fw-bolder f-heading">
+          Get guaranteed marketing results from one of the <br />
+          most trusted digital marketing agencies in New <br />
+          Zealand*.
+        </h1>
+        <p class="fs-4 fw-semibold f-heading res-para">
+          *Ranked in the top 2% of trusted companies in <br />
+          New Zealand based on an independent review of <br />
+          our relationship with our audience.
+        </p>
+      </div>
+      <!-- HTML-END -->
+      <div class="d-grid mr-3 mt-3 d-md-flex justify-content-center">
+        <a href="#" class=""
+          ><button class="button-57" role="button">
+            <span class="text">Learn More <i class="fas fa-arrow-right"></i
+              ></span><span  class="">Click Me</span>
+          </button></a>
+      </div>
+    </section>
+
+    <!-- rounded-section background section end -->
+    <!-- What we do start -->
+    <section class="text-center">
+      <p style="color: #0a7861" class="fs-4 fw-semibold f-heading">
+        What we do
+      </p>
+      <h1 style="cursor: pointer" class="heading-short heading-hover">
+        Website design and development
+      </h1>
+      <h1 style="cursor: pointer" class="heading-short heading-hover">
+        Digital marketing and advertising
+      </h1>
+      <h1 style="cursor: pointer" class="heading-short heading-hover">
+        Marketing strategy and training
+      </h1>
+      <h1 style="cursor: pointer" class="heading-short heading-hover">
+        Videography and photography
+      </h1>
+      <div class="d-grid mr-3 mt-5 d-md-flex justify-content-center">
+        <a href="#" class=""
+          ><button class="button-57" role="button">
+            <span class="text">See All Service <i class="fas fa-arrow-right"></i
+              ></span><span  class="">Click Me</span>
+          </button></a>
+      </div>
+
+      <section class="custom-section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h2 class="">Inside Minds</h2>
+              <p>
+                Powerful insights from your industry peers delivered in fast,
+                free video.
+              </p>
+              <div
+                class="d-grid mr-3 d-md-flex See-all-videos justify-content-Start"
+              >
+                <a href="#" class="">
+                  <button class="button-57" role="button">
+                    <span class="text">See All Video <i class="fas fa-arrow-right"></i
+                      ></span><span  class="">Click Me</span>
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 text-center">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe
+                  class="embed-responsive-item video"
+                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- What we do end -->
+
+    <!-- footer section start  -->
+    <footer class="padding-2">
+      <div class="text-center fw-bold text-white">
+        <h2 class="">Get our teams' brilliant minds</h2>
+        <h1>backing your business growth</h1>
+      </div>
+      <div class="d-grid mr-3 mt-3 d-md-flex justify-content-center">
+        <a href="#" class=""
+          ><button class="button-57" role="button">
+            <span class="text">Contact us <i class="fas fa-arrow-right"></i
+              ></span><span  class="">Click Me</span>
+          </button></a>
+      </div>
+      <hr />
+
+      <div class="container footer-content">
+        <div class="row">
+          <div class="col-md-6 mt-3 logo-center">
+            <img
+              width="200px"
+              src="https://i.postimg.cc/P5hLsFfm/Screenshot-3-removebg-preview.png"
+              alt=""
+            />
+          </div>
+          <div class="col-md-6">
+            <ul
+              class="footer-links d-flex flex-column flex-md-row justify-content-md-between mt-5"
+            >
+              <li>
+                <a href="#" class="text-white fs-4 fw-semibold">What we do</a>
+              </li>
+              <li>
+                <a href="#" class="text-white fs-4 fw-semibold">Our Work</a>
+              </li>
+              <li>
+                <a href="#" class="text-white fs-4 fw-semibold">Why Mint</a>
+              </li>
+              <li>
+                <a href="#" class="text-white fs-4 fw-semibold">Inside Minds</a>
+              </li>
+              <li>
+                <a href="#" class="text-white fs-4 fw-semibold">Careers</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 mt-3">
+            <div class="social-icons d-flex flex-wrap mt-5">
+              <a href="#"><i class="fab fa-facebook-f text-white"></i></a>
+              <a href="#"><i class="fab fa-twitter text-white"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in text-white"></i></a>
+              <a href="#"><i class="fab fa-instagram text-white"></i></a>
+              <a href="#"><i class="fab fa-youtube text-white"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6 mt-3 d-md-flex justify-content-end">
+            <ul class="footer-links-social text-right">
+              <li class="">
+                <a href="tel:+039679505" class="text-white fs-4 fw-semibold">
+                  <span class="mrleft text-right">03 967 9505</span>
+                  <i class="fas fa-phone-alt"></i>
+                </a>
+              </li>
+              <li class="">
+                <a href="tel:+039679505" class="text-white fs-4 fw-semibold">
+                  <span class="mrleft text-right">hello@mintdesign.co.nz</span>
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 mt-3">
+            <h3 class="fs-4 fw-bolder text-white mt-3">
+              © 2024 Mint Design |
+              <a href="#" class="text-white">Privacy Policy</a> |
+              <a href="#" class="text-white">Terms & Conditions</a>
+            </h3>
+          </div>
+          <div class="col-md-6 mt-3">
+            <h3 class="fs-4 fw-bolder text-white mt-3 text-right">
+              Website design and development by Mint Design
+            </h3>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section end here -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

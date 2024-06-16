@@ -1,0 +1,209 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+.heading-font {
+  font-family: "Apparel Display", serif;
+}
+.paragraph-font {
+  font-family: "Cerebri Sans Heavy", sans-serif;
+}
+.navbar {
+  background-color: #0c7962;
+  padding-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar-nav {
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.nav-item {
+  padding-left: 20px;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: auto;
+}
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.section-title {
+  font-family: "Cerebri Sans Heavy", sans-serif;
+  color: #000000;
+  line-height: 40px;
+}
+
+.img-title {
+  font-family: "Cerebri Sans Heavy", sans-serif;
+  color: #000000;
+}
+
+.section-divider {
+  border: 0;
+  height: 2px;
+  background-color: #000000;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.content-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-container:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-css {
+  outline: 0;
+  grid-gap: 8px;
+  align-items: center;
+  background: 0 0;
+  border: 1px solid #000;
+  border-radius: 24px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-shrink: 0;
+  font-size: 16px;
+  gap: 8px;
+  justify-content: center;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: all 0.14s ease-out;
+  white-space: nowrap;
+}
+.btn-css:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+  font-family: "Apparel Display", serif;
+  color: #000;
+  font-size: 45px;
+}
+.page-title {
+  font-family: "Cerebri Sans Heavy", sans-serif;
+  color: #000;
+  font-size: 45px;
+}
+.text-side {
+  text-align: left;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.text-side ul {
+  font-family: "Cerebri Sans Heavy", sans-serif;
+  color: #000;
+  padding-left: 20px; /* Indent the list items */
+  list-style-type: disc; /* Add list bullets */
+  flex: 1; /* Fill remaining space */
+}
+
+.text-side ul li {
+  margin-bottom: 10px;
+}
+
+.text-side button {
+  font-family: Arial, sans-serif;
+  align-self: flex-start;
+}
+
+.img-side {
+  display: flex;
+  align-items: flex-start;
+}
+
+.img-side img {
+  width: 100%;
+  height: auto;
+}
+
+.button-86 {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-86::after,
+.button-86::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all 0.4s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #F34079;
+  border-radius: 10px;
+}
+
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
