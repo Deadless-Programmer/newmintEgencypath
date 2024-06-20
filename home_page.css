@@ -8,6 +8,7 @@
 
 body {
   position: relative;
+  background-color: #f6efe7 !important;
 }
 .position-set {
   position: absolute;
@@ -16,35 +17,65 @@ body {
 
 .navbar {
   background-color: #0c7962;
+  color: #83deb2;
   padding-bottom: 0;
   border-radius: 0;
+  position: sticky !important;
+  top: 0;
+  z-index: 1030; /* Ensure it stays on top of other elements */
 }
 
-.navbar-nav {
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
+.navbar .navbar-nav .nav-link {
+  color: #83deb2;
 }
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
 .nav-item {
   padding-left: 20px;
 }
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-right: auto;
+
+.navbar-toggler {
+  border: none;
 }
-.navbar-collapse {
-  flex-grow: 0;
+
+.offcanvas {
+  background-color: #0c7962;
+  color: #83deb2;
 }
+
+.offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.offcanvas-body {
+  padding: 1rem;
+}
+
+.offcanvas-body .nav-link {
+  color: #83deb2;
+}
+
+.offcanvas-body .nav-link:hover {
+  color: #ffffff;
+}
+
 .wrapper {
   padding: 70px 0;
+}
+.overallWidth {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Default slide styles */
 .center-slider .slick-slide {
   color: #fff;
-  height: 300px;
-  width: 300px;
+  height: 450px;
+  width: 400px;
   margin: 0 15px 0 0;
   display: flex;
   align-items: center;
@@ -53,7 +84,25 @@ body {
   transition: all 0.4s ease-in-out;
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 123.44px 123.44px 123.44px 123.44px / 123.44px 123.44px
+    123.44px 123.44px;
+}
+
+.center-slider .slick-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(2, 112, 89, 0.7);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 1;
+}
+
+.center-slider .slick-slide:hover::before {
+  opacity: 1;
 }
 
 .center-slider .slick-slide img {
@@ -64,23 +113,25 @@ body {
   top: 0;
   left: 0;
   transition: transform 0.4s ease-in-out;
+  z-index: 0;
 }
 
 .center-slider .slick-slide h2 {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
   color: #fff;
   font-size: 1.2em;
   transition: transform 0.4s ease-in-out;
-  border-radius: 5px;
+  z-index: 2;
 }
 
-.center-slider .slick-slide:hover img,
-.center-slider .slick-slide:hover h2 {
+.center-slider .slick-slide:hover img {
   transform: scale(1.1);
 }
 
@@ -102,55 +153,74 @@ body {
 }
 
 .center-slider .slick-current.slick-active {
-  transform: scale(1.1);
-  background-color: #000000;
+  transform: scale(1);
 }
 
 .slick-next,
 .slick-prev {
-  z-index: 5;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .slick-next {
-  right: 15px;
-}
-
-.slick-prev {
-  left: 15px;
+  right: 18px;
 }
 
 .slick-next:before,
 .slick-prev:before {
   color: #fff;
-  font-size: 26px;
+  font-size: 50px;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .center-slider {
-    flex-direction: column; /* Display slides in a column on small screens */
-    align-items: center; /* Center align slides */
-  }
-
   .center-slider .slick-slide {
-    width: 100%; /* Make slides take full width */
-    height: auto; /* Adjust height to fit content */
-    transform: none; /* Reset transform */
-    margin-bottom: 20px; /* Add space between slides */
+    color: #fff;
+    height: 350px;
+    width: 300px;
+    margin: 0 15px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.8);
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border-radius: 123.44px 123.44px 123.44px 123.44px / 123.44px 123.44px
+      123.44px 123.44px;
   }
 
   .center-slider .slick-slide h2 {
-    position: static; /* Reset position */
-    margin: 10px 0; /* Adjust margin */
-    padding: 10px; /* Add padding */
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust background color */
-    font-size: 1rem; /* Adjust font size */
-    border-radius: 5px; /* Add border radius */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    transition: transform 0.4s ease-in-out;
   }
 
   .slick-next,
   .slick-prev {
-    display: none; /* Hide navigation arrows on small screens */
+    display: block;
+    top: auto;
+    bottom: -30px;
+    transform: translateY(0);
+    font-size: 30px;
+  }
+
+  .slick-prev {
+    left: calc(50% - 85px); /* Adjust based on the size of the arrows */
+  }
+
+  .slick-next {
+    right: calc(50% - 50px); /* Adjust based on the size of the arrows */
   }
 }
 
@@ -166,116 +236,95 @@ body {
 }
 
 /* Base styles */
+.rounded-section-top {
+  width: 100%;
+  position: absolute;
+  top: -140px;
+}
+.rounded-section-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: -140px;
+}
 .rounded-section {
+  position: relative;
   height: auto;
-  padding: 60px 0;
+  margin-top: 150px;
+  /* padding: 60px 0; */
   font-family: "Apparel Display", serif;
   background-color: #83deb2;
   margin-bottom: 80px;
-  clip-path: ellipse(80% 50% at 50% 50%);
+  padding-bottom: 40px;
 }
-
 .rounded-section .item {
   padding: 30px;
   text-align: center;
   margin-bottom: 30px;
 }
-
 .rounded-section .item img {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
 }
-
 .rounded-section .item h3 {
   font-family: "Cerebri Sans Heavy", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 10px;
   color: #000;
   font-weight: 700;
 }
-
 .rounded-section .item p {
   font-family: "Cerebri Sans Heavy", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   color: #000;
 }
 .container.text-center.mt-5.pt-5 .res-heading {
-  font-size: 2rem; /* Adjust base font size if needed */
+  font-size: 2.8rem; /* Adjust base font size if needed */
 }
-
-
-
+.rounded-section h1 {
+  color: #000;
+}
 .container.text-center.mt-5.pt-5 {
   font-size: 1.25rem; /* Adjust base font size if needed */
 }
 /* Responsive styles for mobile devices */
 @media (max-width: 768px) {
+  .rounded-section-top {
+    width: 100%;
+    position: absolute;
+    top: -44px;
+  }
   .rounded-section {
-    height: auto; /* Adjust height to fit content */
-    padding: 80px 0; /* Reduce padding */
-
-    clip-path: ellipse(
-      80% 50% at 50% 50%
-    ); /* Adjust clip-path for smaller screens */
+    padding-top: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
-  .rounded-section .item {
-    padding: 15px; /* Reduce padding */
-    margin-bottom: 15px; /* Reduce margin */
+  .section-paragraph {
+    font-size: 16px !important;
   }
-
-  .rounded-section .item h3 {
-    font-size: 1.2rem; /* Reduce font size */
-    margin-bottom: 8px; /* Reduce margin */
+  .section-title {
+    font-size: 50px !important;
   }
-
-  .rounded-section .item p {
-    font-size: 1rem; /* Reduce font size */
-    line-height: 1.4; /* Adjust line height */
+  .rounded-section-bottom {
+    width: 100%;
+    position: absolute;
+    bottom: -44px;
   }
-
-  .rounded-section .heading-short {
-    font-size: 4rem; /* Reduce font size */
-    line-height: 1.4; /* Adjust line height */
-  }
-
-  .wrapper h1.heading-short {
-    font-size: 4rem; /* Reduce font size */
-    margin: 20px 0; /* Adjust margin */
-  }
-
-  .center-slider div h2 {
-    font-size: 1.2rem; /* Reduce font size */
-  }
-
-  .container .heading-short {
-    font-size: 1.5rem; /* Reduce font size */
-  }
-  .container .text-heading {
-    font-size: 4rem; /* Reduce font size */
-  }
-
-  .container .lead {
-    font-size: 1rem; /* Reduce font size */
-  }
-
-  .container .text-center h1.fs-2 {
-    font-size: 1.5rem; /* Reduce font size */
-  }
-  .container.text-center.mt-5.pt-5 .res-heading {
-    font-size: 1.3rem; /* Adjust base font size if needed */
-  }
-  .res-para {
-    font-size: 1rem !important;
+  .See-All-Our-Work {
+    margin-top: 80px !important;
   }
 }
 
+.what-we {
+  margin-top: 200px;
+}
+
 @media (max-width: 768px) {
-  .What-we-do-start {
-    margin-top: 30px;
+  .what-we {
+    margin-top: 80px;
   }
   .See-all-videos {
     margin-bottom: 50px;
@@ -283,11 +332,11 @@ body {
 }
 footer {
   /* height: 400lvh; */
+  margin-top: 240px;
+  padding-top: 40px;
   font-family: "Apparel Display", serif;
-  background-color: #0a7861;
-  padding-top: 280px;
-  /* clip-path: ellipse(70% 40% at 50% 40%); */
-  clip-path: ellipse(70% 49% at 50% 70%);
+  background-color: #028065;
+  position: relative;
 }
 footer h2 {
   font-family: "Cerebri Sans Heavy", sans-serif;
@@ -302,7 +351,7 @@ footer h1 {
 }
 
 .footer-content {
-  color: #fff;
+  color: #83deb2 !important;
   padding: 40px 0;
 }
 
@@ -320,7 +369,7 @@ footer h1 {
 
 .footer-links a,
 .footer-links-social a {
-  color: #fff;
+  color: #83deb2 !important;
   text-decoration: none;
 }
 
@@ -330,7 +379,7 @@ footer h1 {
 }
 
 .social-icons a {
-  color: #fff;
+  /* color: #83deb2 !important; */
   font-size: 1.5em;
   text-decoration: none;
   margin-right: 15px;
@@ -353,30 +402,38 @@ footer h1 {
 }
 
 @media (max-width: 767.98px) {
-  .logo-center{
+  .logo-center {
     text-align: center;
   }
-  .heading-short-res{
-    font-family: "Apparel Display", serif;
-        font-size: 3.5rem !important
+  footer {
+    margin-top: 140px;
+    padding-top: 5px;
   }
-  .heading-short-res2{
+
+  .heading-short-res {
     font-family: "Apparel Display", serif;
-        font-size: 3rem !important
+    font-size: 3.5rem !important;
+  }
+  .heading-short-res2 {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Apparel Display", serif;
+    font-size: 3rem !important;
   }
   footer h2 {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 50px;
-    font-size: 35px;
+    padding: 0 40px;
+    font-size: 50px;
   }
   footer h1 {
-    max-width: 60%;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
 
-    font-size: 40px;
+    font-size: 50px;
   }
   .resLogo {
     text-align: center !important;

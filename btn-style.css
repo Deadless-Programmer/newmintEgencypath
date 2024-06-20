@@ -1,0 +1,59 @@
+.wrapper .button {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  height: 60px;
+  margin: 0 5px;
+  background: none; /* No background by default */
+  cursor: pointer;
+
+  overflow: hidden; /* Prevent content overflow */
+  position: relative; /* Position relative for pseudo-element */
+}
+
+.wrapper .button .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50%;
+
+  box-sizing: border-box;
+  transition: all 0.2s ease-out; /* Smooth transition for background */
+}
+
+.wrapper .button .icon i {
+  font-size: 25px;
+  line-height: 60px;
+}
+
+.wrapper .button span {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 10px; /* Space the text to the right of the icon */
+  white-space: nowrap; /* Prevent text wrapping */
+  transition: color 0.2s ease-out; /* Smooth transition for text color */
+}
+
+.wrapper .button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60px; /* Initial width to cover only the icon */
+  background: #83deb2;
+  border-radius: 50%; /* Circle shape */
+  transition: width 0.2s ease-out; /* Smooth transition for width */
+  z-index: -1; /* Place it behind the content */
+}
+
+.wrapper .button:hover::before {
+  width: 15%; /* Expand the background to cover the entire button */
+  border-radius: 50px; /* Rounded corners when expanded */
+}
+
+.wrapper .button:hover span {
+  color: #fff; /* Change text color on hover */
+}

@@ -1,7 +1,6 @@
-
 $(document).ready(function(){
     $('.center-slider').slick({
-        slidesToShow: 5,
+        slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
         arrows: true,
@@ -9,10 +8,22 @@ $(document).ready(function(){
         speed: 300,
         centerPadding: '20px',
         infinite: true,
-        autoplaySpeed: 5000,
-        autoplay: true
+        autoplaySpeed: 2000,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 768, // Mobile breakpoint
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: false, // Disable center mode on mobile
+                    arrows: true // Show arrows on mobile
+                }
+            }
+        ]
     });
 });
+
+
 
 $('.logos-slider').slick({
     slidesToShow: 4,
